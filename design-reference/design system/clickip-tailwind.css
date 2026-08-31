@@ -1,0 +1,145 @@
+/* ClickIP Design System — bridge para Tailwind v4.
+   Importe DEPOIS de clickip-tokens.css:
+     @import "./clickip-tokens.css";
+     @import "tailwindcss";
+     @import "./clickip-tailwind.css";
+   Assim `bg-brand`, `text-weak` e `rounded-lg` saem do mesmo lugar que o CSS puro. */
+
+@theme {
+  --color-teal-50: #D7FFFB;
+  --color-teal-100: #A4FFF7;
+  --color-teal-200: #8AEFE7;
+  --color-teal-300: #65DAD1;
+  --color-teal-400: #36C2BA;
+  --color-teal-500: #00A8A1;
+  --color-teal-600: #008C86;
+  --color-teal-700: #00716C;
+  --color-teal-800: #005652;
+  --color-teal-900: #003C39;
+  --color-teal-950: #002523;
+  --color-orange-50: #FFF3EE;
+  --color-orange-100: #FFE5DB;
+  --color-orange-200: #FFCDBA;
+  --color-orange-300: #FFAC8C;
+  --color-orange-400: #FF824F;
+  --color-orange-500: #F15B00;
+  --color-orange-600: #CA4B00;
+  --color-orange-700: #A43B00;
+  --color-orange-800: #7F2C00;
+  --color-orange-900: #5A1C00;
+  --color-orange-950: #3A0F00;
+  --color-navy-50: #ECF8FF;
+  --color-navy-100: #D7EFFF;
+  --color-navy-200: #B3E1FF;
+  --color-navy-300: #7FCEFF;
+  --color-navy-400: #5DB5EA;
+  --color-navy-500: #3A9CD3;
+  --color-navy-600: #1083B9;
+  --color-navy-700: #006998;
+  --color-navy-800: #005075;
+  --color-navy-900: #003853;
+  --color-navy-950: #002234;
+  --color-gray-0: #FFFFFF;
+  --color-gray-50: #F4F7F9;
+  --color-gray-100: #E8EEF2;
+  --color-gray-200: #D5DEE4;
+  --color-gray-300: #BAC5CD;
+  --color-gray-400: #A0ADB5;
+  --color-gray-500: #87949D;
+  --color-gray-600: #6F7C84;
+  --color-gray-700: #58646C;
+  --color-gray-800: #424C53;
+  --color-gray-900: #2C353A;
+  --color-gray-950: #192024;
+  --color-crimson-50: #FFF2F2;
+  --color-crimson-100: #FFE4E3;
+  --color-crimson-200: #FFCBCA;
+  --color-crimson-300: #FFA8A8;
+  --color-crimson-400: #FF7D80;
+  --color-crimson-500: #EF5661;
+  --color-crimson-600: #D23848;
+  --color-crimson-700: #B21D33;
+  --color-crimson-800: #8E0021;
+  --color-crimson-900: #660015;
+  --color-crimson-950: #41000A;
+  --color-amber-50: #FFF4E5;
+  --color-amber-100: #FFE7C8;
+  --color-amber-200: #FFD194;
+  --color-amber-300: #FFB232;
+  --color-amber-400: #E49900;
+  --color-amber-500: #C48300;
+  --color-amber-600: #A46D00;
+  --color-amber-700: #845700;
+  --color-amber-800: #664200;
+  --color-amber-900: #482D00;
+  --color-amber-950: #2D1A00;
+  --color-green-50: #E0FFE8;
+  --color-green-100: #B7FFCC;
+  --color-green-200: #9CF1B7;
+  --color-green-300: #7CDC9C;
+  --color-green-400: #59C481;
+  --color-green-500: #32AC66;
+  --color-green-600: #00924E;
+  --color-green-700: #00763E;
+  --color-green-800: #005A2E;
+  --color-green-900: #003F1E;
+  --color-green-950: #002710;
+
+  /* semânticos — apontam para a camada 2, então seguem o tema */
+  --color-bg-canvas: var(--bg-canvas);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-raised: var(--bg-raised);
+  --color-bg-overlay: var(--bg-overlay);
+  --color-fg-strong: var(--text-strong);
+  --color-fg-weak: var(--text-weak);
+  --color-fg-weaker: var(--text-weaker);
+  --color-fg-inverse: var(--text-inverse);
+  --color-brand: var(--fill-brand-strong);
+  --color-accent: var(--fill-accent-strong);
+  --color-danger: var(--fill-error-strong);
+  --color-line: var(--stroke-weak);
+  --color-line-strong: var(--stroke-strong);
+
+  --spacing-1: 2px;
+  --spacing-2: 4px;
+  --spacing-3: 8px;
+  --spacing-4: 12px;
+  --spacing-5: 16px;
+  --spacing-6: 20px;
+  --spacing-7: 24px;
+  --spacing-8: 32px;
+  --spacing-9: 40px;
+  --spacing-10: 48px;
+  --spacing-11: 64px;
+  --spacing-12: 80px;
+  --spacing-13: 96px;
+  --spacing-14: 128px;
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 999px;
+
+  --text-3xs: 11px;  --text-3xs--line-height: 16px;
+  --text-2xs: 12px;  --text-2xs--line-height: 16px;
+  --text-xs: 13px;  --text-xs--line-height: 20px;
+  --text-sm: 14px;  --text-sm--line-height: 20px;
+  --text-md: 16px;  --text-md--line-height: 24px;
+  --text-lg: 20px;  --text-lg--line-height: 28px;
+  --text-xl: 25px;  --text-xl--line-height: 32px;
+  --text-2xl: 31px;  --text-2xl--line-height: 40px;
+  --text-3xl: 39px;  --text-3xl--line-height: 48px;
+  --text-4xl: 49px;  --text-4xl--line-height: 56px;
+  --text-5xl: 61px;  --text-5xl--line-height: 64px;
+
+  --font-display: "Archivo", system-ui, sans-serif;
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --shadow-sm: var(--shadow-sm);
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-spring: cubic-bezier(0.34, 1.28, 0.64, 1);
+}

@@ -1,0 +1,476 @@
+/* ============================================================
+   ClickIP Design System — Tokens
+   v1.0 · Camada 1 (primitivos) + Camada 2 (semânticos)
+
+   REGRA: componente NUNCA consome primitivo (--ckp-teal-600).
+   Componente consome SEMÂNTICO (--fill-brand-strong).
+   Trocar tema = trocar Camada 2. Primitivo nunca muda.
+   ============================================================ */
+
+:root {
+
+  /* ---------- 1. PRIMITIVOS — COR ------------------------------
+     Rampas geradas em OKLab a partir das 3 cores da marca,
+     com gamut mapping (redução de croma, sem clipping de RGB).
+     Cores originais da logo, preservadas para uso institucional:
+       teal  #1EA099   orange #E56125   navy #003048
+     ------------------------------------------------------------ */
+
+  /* Teal — cor primária de ação */
+  --ckp-teal-50:  #D7FFFB;
+  --ckp-teal-100: #A4FFF7;
+  --ckp-teal-200: #8AEFE7;
+  --ckp-teal-300: #65DAD1;
+  --ckp-teal-400: #36C2BA;
+  --ckp-teal-500: #00A8A1;
+  --ckp-teal-600: #008C86;
+  --ckp-teal-700: #00716C;
+  --ckp-teal-800: #005652;
+  --ckp-teal-900: #003C39;
+  --ckp-teal-950: #002523;
+  --ckp-teal-brand: #1EA099;   /* logo — uso institucional apenas */
+
+  /* Orange — acento de marca. NUNCA usar como estado do sistema. */
+  --ckp-orange-50:  #FFF3EE;
+  --ckp-orange-100: #FFE5DB;
+  --ckp-orange-200: #FFCDBA;
+  --ckp-orange-300: #FFAC8C;
+  --ckp-orange-400: #FF824F;
+  --ckp-orange-500: #F15B00;
+  --ckp-orange-600: #CA4B00;
+  --ckp-orange-700: #A43B00;
+  --ckp-orange-800: #7F2C00;
+  --ckp-orange-900: #5A1C00;
+  --ckp-orange-950: #3A0F00;
+  --ckp-orange-brand: #E56125; /* logo — uso institucional apenas */
+
+  /* Navy — estrutura, headers, superfícies invertidas */
+  --ckp-navy-50:  #ECF8FF;
+  --ckp-navy-100: #D7EFFF;
+  --ckp-navy-200: #B3E1FF;
+  --ckp-navy-300: #7FCEFF;
+  --ckp-navy-400: #5DB5EA;
+  --ckp-navy-500: #3A9CD3;
+  --ckp-navy-600: #1083B9;
+  --ckp-navy-700: #006998;
+  --ckp-navy-800: #005075;
+  --ckp-navy-900: #003853;
+  --ckp-navy-950: #002234;
+  --ckp-navy-brand: #003048;   /* logo */
+
+  /* Gray — neutros com fundo petrol (mesma matiz do navy, croma 0.017) */
+  --ckp-gray-0:   #FFFFFF;
+  --ckp-gray-50:  #F4F7F9;
+  --ckp-gray-100: #E8EEF2;
+  --ckp-gray-200: #D5DEE4;
+  --ckp-gray-300: #BAC5CD;
+  --ckp-gray-400: #A0ADB5;
+  --ckp-gray-500: #87949D;
+  --ckp-gray-600: #6F7C84;
+  --ckp-gray-700: #58646C;
+  --ckp-gray-800: #424C53;
+  --ckp-gray-900: #2C353A;
+  --ckp-gray-950: #192024;
+
+  /* Crimson — erro / destrutivo (matiz 20°, afastado do laranja 42°) */
+  --ckp-crimson-50:  #FFF2F2;
+  --ckp-crimson-100: #FFE4E3;
+  --ckp-crimson-200: #FFCBCA;
+  --ckp-crimson-300: #FFA8A8;
+  --ckp-crimson-400: #FF7D80;
+  --ckp-crimson-500: #EF5661;
+  --ckp-crimson-600: #D23848;
+  --ckp-crimson-700: #B21D33;
+  --ckp-crimson-800: #8E0021;
+  --ckp-crimson-900: #660015;
+  --ckp-crimson-950: #41000A;
+
+  /* Amber — atenção / pendente */
+  --ckp-amber-50:  #FFF4E5;
+  --ckp-amber-100: #FFE7C8;
+  --ckp-amber-200: #FFD194;
+  --ckp-amber-300: #FFB232;
+  --ckp-amber-400: #E49900;
+  --ckp-amber-500: #C48300;
+  --ckp-amber-600: #A46D00;
+  --ckp-amber-700: #845700;
+  --ckp-amber-800: #664200;
+  --ckp-amber-900: #482D00;
+  --ckp-amber-950: #2D1A00;
+
+  /* Green — sucesso (matiz 154°, afastado do teal 189°) */
+  --ckp-green-50:  #E0FFE8;
+  --ckp-green-100: #B7FFCC;
+  --ckp-green-200: #9CF1B7;
+  --ckp-green-300: #7CDC9C;
+  --ckp-green-400: #59C481;
+  --ckp-green-500: #32AC66;
+  --ckp-green-600: #00924E;
+  --ckp-green-700: #00763E;
+  --ckp-green-800: #005A2E;
+  --ckp-green-900: #003F1E;
+  --ckp-green-950: #002710;
+
+  /* Superfícies dark (não derivam de gray: matiz navy, croma alto no escuro) */
+  --ckp-ink-canvas:  #071319;
+  --ckp-ink-surface: #0E1C23;
+  --ckp-ink-raised:  #14242C;
+  --ckp-ink-overlay: #1B2F38;
+  --ckp-ink-sunken:  #030B0F;
+
+
+  /* ---------- 2. PRIMITIVOS — TIPOGRAFIA ---------------------- */
+  --ckp-font-display: "Archivo", "Archivo Variable", system-ui, sans-serif;
+  --ckp-font-body:    "Instrument Sans", "Inter", system-ui, sans-serif;
+  --ckp-font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+
+  /* Escala tipográfica: base 16, razão 1.25 (terça maior), arredondada.
+     Line-heights sempre múltiplos de 4 para fechar no grid. */
+  --ckp-size-3xs: 11px;  --ckp-lh-3xs: 16px;
+  --ckp-size-2xs: 12px;  --ckp-lh-2xs: 16px;
+  --ckp-size-xs:  13px;  --ckp-lh-xs:  20px;
+  --ckp-size-sm:  14px;  --ckp-lh-sm:  20px;
+  --ckp-size-md:  16px;  --ckp-lh-md:  24px;
+  --ckp-size-lg:  20px;  --ckp-lh-lg:  28px;
+  --ckp-size-xl:  25px;  --ckp-lh-xl:  32px;
+  --ckp-size-2xl: 31px;  --ckp-lh-2xl: 40px;
+  --ckp-size-3xl: 39px;  --ckp-lh-3xl: 48px;
+  --ckp-size-4xl: 49px;  --ckp-lh-4xl: 56px;
+  --ckp-size-5xl: 61px;  --ckp-lh-5xl: 64px;
+
+  --ckp-weight-regular: 400;
+  --ckp-weight-medium:  500;
+  --ckp-weight-semibold:600;
+  --ckp-weight-bold:    700;
+  --ckp-weight-black:   800;
+
+  --ckp-track-tighter: -0.03em;
+  --ckp-track-tight:   -0.015em;
+  --ckp-track-normal:  0;
+  --ckp-track-wide:    0.02em;
+  --ckp-track-widest:  0.09em;
+
+
+  /* ---------- 3. PRIMITIVOS — ESPAÇO / RAIO / TRAÇO ----------- */
+  /* Base 4px. Os degraus 2 e 12 existem porque gap ícone↔label e
+     padding de input não cabem numa escala 8pt pura. */
+  --ckp-space-0:  0px;
+  --ckp-space-1:  2px;
+  --ckp-space-2:  4px;
+  --ckp-space-3:  8px;
+  --ckp-space-4:  12px;
+  --ckp-space-5:  16px;
+  --ckp-space-6:  20px;
+  --ckp-space-7:  24px;
+  --ckp-space-8:  32px;
+  --ckp-space-9:  40px;
+  --ckp-space-10: 48px;
+  --ckp-space-11: 64px;
+  --ckp-space-12: 80px;
+  --ckp-space-13: 96px;
+  --ckp-space-14: 128px;
+
+  --ckp-radius-xs:   4px;
+  --ckp-radius-sm:   6px;
+  --ckp-radius-md:   8px;
+  --ckp-radius-lg:   12px;
+  --ckp-radius-xl:   16px;
+  --ckp-radius-2xl:  24px;
+  --ckp-radius-full: 999px;
+
+  --ckp-border-thin:  1px;
+  --ckp-border-thick: 2px;
+  --ckp-border-heavy: 3px;   /* marcador de item ativo (cunha laranja) */
+
+  /* Ícones: grade 24, traço 1.5. Nunca escalar o SVG — trocar o tamanho. */
+  --ckp-icon-sm: 16px;
+  --ckp-icon-md: 20px;
+  --ckp-icon-lg: 24px;
+  --ckp-icon-xl: 32px;
+  --ckp-icon-stroke: 1.5;
+
+  /* Alvo de toque mínimo (WCAG 2.2 AA = 24px; adotamos 44 em mobile) */
+  --ckp-target-min: 44px;
+
+  --ckp-control-sm: 32px;
+  --ckp-control-md: 40px;
+  --ckp-control-lg: 48px;
+
+
+  /* ---------- 4. PRIMITIVOS — MOVIMENTO ----------------------- */
+  --ckp-duration-instant: 90ms;
+  --ckp-duration-fast:    140ms;
+  --ckp-duration-normal:  220ms;
+  --ckp-duration-slow:    320ms;
+  --ckp-duration-slower:  480ms;
+
+  --ckp-ease-out:    cubic-bezier(0.25, 1, 0.5, 1);      /* hover, feedback */
+  --ckp-ease-in:     cubic-bezier(0.4, 0, 1, 1);         /* saída */
+  --ckp-ease-inout:  cubic-bezier(0.65, 0, 0.35, 1);     /* movimento contínuo */
+  --ckp-ease-spring: cubic-bezier(0.34, 1.28, 0.64, 1);  /* morph, entrada de camada */
+
+
+  /* ============================================================
+     CAMADA 2 — SEMÂNTICOS (LIGHT)
+     Convenção: elemento-tom-ênfase-estado
+     ============================================================ */
+
+  /* Fundos por elevação */
+  --bg-canvas:   var(--ckp-gray-50);
+  --bg-surface:  var(--ckp-gray-0);
+  --bg-raised:   var(--ckp-gray-0);
+  --bg-overlay:  var(--ckp-gray-0);
+  --bg-sunken:   var(--ckp-gray-100);
+  --bg-inverse:  var(--ckp-navy-brand);
+
+  /* Texto */
+  --text-strong:   var(--ckp-navy-brand);
+  --text-weak:     var(--ckp-gray-700);
+  --text-weaker:   var(--ckp-gray-500);
+  --text-inverse:  var(--ckp-gray-0);
+  --text-disabled: var(--ckp-gray-400);
+  --text-brand:    var(--ckp-teal-700);
+  --text-accent:   var(--ckp-orange-700);
+  --text-error:    var(--ckp-crimson-700);
+  --text-warning:  var(--ckp-amber-700);
+  --text-success:  var(--ckp-green-700);
+  --text-link:     var(--ckp-teal-700);
+
+  /* Ícones */
+  --icon-strong:   var(--ckp-navy-brand);
+  --icon-neutral:  var(--ckp-gray-600);
+  --icon-weak:     var(--ckp-gray-400);
+  --icon-inverse:  var(--ckp-gray-0);
+  --icon-disabled: var(--ckp-gray-300);
+  --icon-brand:    var(--ckp-teal-700);
+  --icon-accent:   var(--ckp-orange-600);
+  --icon-error:    var(--ckp-crimson-600);
+  --icon-warning:  var(--ckp-amber-600);
+  --icon-success:  var(--ckp-green-600);
+
+  /* Traços */
+  --stroke-weak:     var(--ckp-gray-200);
+  --stroke-strong:   var(--ckp-gray-300);
+  --stroke-stronger: var(--ckp-gray-500);
+  --stroke-brand:    var(--ckp-teal-600);
+  --stroke-accent:   var(--ckp-orange-500);
+  --stroke-error:    var(--ckp-crimson-600);
+  --stroke-warning:  var(--ckp-amber-500);
+  --stroke-success:  var(--ckp-green-600);
+  --stroke-disabled: var(--ckp-gray-200);
+  --stroke-inverse:  rgba(255,255,255,0.24);
+
+  /* Preenchimentos sólidos */
+  --fill-brand-strong:        var(--ckp-teal-700);
+  --fill-brand-strong-hover:  var(--ckp-teal-800);
+  --fill-brand-strong-press:  var(--ckp-teal-900);
+  --fill-brand-weak:          var(--ckp-teal-50);
+  --fill-brand-weak-hover:    var(--ckp-teal-100);
+
+  --fill-accent-strong:       var(--ckp-orange-600);
+  --fill-accent-strong-hover: var(--ckp-orange-700);
+  --fill-accent-weak:         var(--ckp-orange-50);
+
+  --fill-neutral-strong:       var(--ckp-navy-brand);
+  --fill-neutral-strong-hover: var(--ckp-navy-950);
+  --fill-neutral-weak:         var(--ckp-gray-100);
+  --fill-neutral-weak-hover:   var(--ckp-gray-200);
+  --fill-neutral-weaker:       var(--ckp-gray-50);
+
+  --fill-error-strong:        var(--ckp-crimson-600);
+  --fill-error-strong-hover:  var(--ckp-crimson-700);
+  --fill-error-strong-press:  var(--ckp-crimson-800);
+  --fill-error-weak:          var(--ckp-crimson-50);
+
+  --fill-warning-strong:      var(--ckp-amber-600);
+  --fill-warning-weak:        var(--ckp-amber-50);
+
+  --fill-success-strong:      var(--ckp-green-600);
+  --fill-success-weak:        var(--ckp-green-50);
+
+  --fill-disabled:            var(--ckp-gray-100);
+
+  /* Overlays de estado — aplicados POR CIMA de qualquer fill.
+     Modelo da referência: o estado é uma camada, não outra cor. */
+  --overlay-hover:    rgba(0, 48, 72, 0.06);
+  --overlay-press:    rgba(0, 48, 72, 0.12);
+  --overlay-selected: rgba(0, 113, 108, 0.10);
+  --overlay-scrim:    rgba(3, 20, 28, 0.55);
+
+  /* Foco — SEMPRE visível, nunca removido sem substituto */
+  --focus-ring:        var(--ckp-teal-600);
+  --focus-ring-width:  2px;
+  --focus-ring-offset: 2px;
+
+  /* Elevação — sombra tingida de navy, nunca preto puro */
+  --shadow-xs: 0 1px 2px rgba(0,48,72,0.06);
+  --shadow-sm: 0 1px 2px rgba(0,48,72,0.06), 0 2px 4px rgba(0,48,72,0.05);
+  --shadow-md: 0 2px 4px rgba(0,48,72,0.05), 0 6px 12px rgba(0,48,72,0.08);
+  --shadow-lg: 0 4px 8px rgba(0,48,72,0.05), 0 14px 28px rgba(0,48,72,0.10);
+  --shadow-xl: 0 8px 16px rgba(0,48,72,0.06), 0 28px 56px rgba(0,48,72,0.14);
+  --shadow-inset-top: none;
+}
+
+
+/* ============================================================
+   CAMADA 2 — SEMÂNTICOS (DARK)
+   Elevação no dark é LUMINÂNCIA, não sombra: sombra em fundo
+   escuro é quase invisível. Cada nível sobe ~4% de L + traço.
+   ============================================================ */
+[data-theme="dark"] {
+  --bg-canvas:   var(--ckp-ink-canvas);
+  --bg-surface:  var(--ckp-ink-surface);
+  --bg-raised:   var(--ckp-ink-raised);
+  --bg-overlay:  var(--ckp-ink-overlay);
+  --bg-sunken:   var(--ckp-ink-sunken);
+  --bg-inverse:  var(--ckp-gray-50);
+
+  --text-strong:   #E8F0F4;
+  --text-weak:     #A6B7C0;
+  --text-weaker:   #7A8B95;
+  --text-inverse:  var(--ckp-navy-950);
+  --text-disabled: #4A5A63;
+  --text-brand:    var(--ckp-teal-300);
+  --text-accent:   var(--ckp-orange-300);
+  --text-error:    var(--ckp-crimson-300);
+  --text-warning:  var(--ckp-amber-300);
+  --text-success:  var(--ckp-green-300);
+  --text-link:     var(--ckp-teal-300);
+
+  --icon-strong:   #E8F0F4;
+  --icon-neutral:  #93A5AF;
+  --icon-weak:     #66787F;
+  --icon-inverse:  var(--ckp-navy-950);
+  --icon-disabled: #45555D;
+  --icon-brand:    var(--ckp-teal-300);
+  --icon-accent:   var(--ckp-orange-400);
+  --icon-error:    var(--ckp-crimson-400);
+  --icon-warning:  var(--ckp-amber-300);
+  --icon-success:  var(--ckp-green-300);
+
+  --stroke-weak:     rgba(255,255,255,0.09);
+  --stroke-strong:   rgba(255,255,255,0.18);
+  --stroke-stronger: rgba(255,255,255,0.34);
+  --stroke-brand:    var(--ckp-teal-400);
+  --stroke-accent:   var(--ckp-orange-400);
+  --stroke-error:    var(--ckp-crimson-400);
+  --stroke-warning:  var(--ckp-amber-400);
+  --stroke-success:  var(--ckp-green-400);
+  --stroke-disabled: rgba(255,255,255,0.07);
+  --stroke-inverse:  rgba(0,48,72,0.24);
+
+  /* Fill claro + label escuro: a mesma lógica do bloco teal da logo. */
+  --fill-brand-strong:        var(--ckp-teal-400);
+  --fill-brand-strong-hover:  var(--ckp-teal-300);
+  --fill-brand-strong-press:  var(--ckp-teal-500);
+  --fill-brand-weak:          rgba(54,194,186,0.14);
+  --fill-brand-weak-hover:    rgba(54,194,186,0.22);
+
+  --fill-accent-strong:       var(--ckp-orange-400);
+  --fill-accent-strong-hover: var(--ckp-orange-300);
+  --fill-accent-weak:         rgba(255,130,79,0.15);
+
+  --fill-neutral-strong:       #E8F0F4;
+  --fill-neutral-strong-hover: #FFFFFF;
+  --fill-neutral-weak:         rgba(255,255,255,0.07);
+  --fill-neutral-weak-hover:   rgba(255,255,255,0.12);
+  --fill-neutral-weaker:       rgba(255,255,255,0.04);
+
+  --fill-error-strong:        var(--ckp-crimson-400);
+  --fill-error-strong-hover:  var(--ckp-crimson-300);
+  --fill-error-strong-press:  var(--ckp-crimson-500);
+  --fill-error-weak:          rgba(255,125,128,0.15);
+
+  --fill-warning-strong:      var(--ckp-amber-300);
+  --fill-warning-weak:        rgba(255,178,50,0.15);
+
+  --fill-success-strong:      var(--ckp-green-400);
+  --fill-success-weak:        rgba(89,196,129,0.15);
+
+  --fill-disabled:            rgba(255,255,255,0.06);
+
+  --overlay-hover:    rgba(255,255,255,0.07);
+  --overlay-press:    rgba(255,255,255,0.13);
+  --overlay-selected: rgba(54,194,186,0.16);
+  --overlay-scrim:    rgba(0,6,10,0.72);
+
+  --focus-ring: var(--ckp-teal-300);
+
+  /* Sombra sobrevive só nos níveis altos, e mais opaca */
+  --shadow-xs: none;
+  --shadow-sm: none;
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.40);
+  --shadow-lg: 0 10px 28px rgba(0,0,0,0.50);
+  --shadow-xl: 0 20px 56px rgba(0,0,0,0.60);
+  /* Luz de topo de 1px: substitui a sombra como sinal de elevação */
+  --shadow-inset-top: inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+/* Acessibilidade: movimento reduzido é obrigatório, não opcional */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ckp-duration-instant: 1ms;
+    --ckp-duration-fast:    1ms;
+    --ckp-duration-normal:  1ms;
+    --ckp-duration-slow:    1ms;
+    --ckp-duration-slower:  1ms;
+  }
+}
+
+/* Logo: a tinta do logotipo acompanha o tema; o miolo "IP" inverte junto. */
+:root { --logo-ink: #003048; --logo-ink-inverse: #FFFFFF; }
+[data-theme="dark"] { --logo-ink: #E8F0F4; --logo-ink-inverse: #071319; }
+
+/* A grade Fortes e alguns utilitários Tailwind apontam estes nomes.
+ * Eles só redirecionam semânticos do kit — o tema continua numa camada. */
+:root {
+  --background-neutral-weaker: var(--bg-surface);
+  --background-neutral-weakest: var(--bg-canvas);
+  --text-neutral-strong: var(--text-strong);
+  --stroke-neutral-weak: var(--stroke-weak);
+  --background-error-weaker: var(--fill-error-weak);
+  --background-warning-weaker: var(--fill-warning-weak);
+}
+
+@theme inline {
+  --color-bg-canvas: var(--bg-canvas);
+  --color-bg-weaker: var(--bg-surface);
+  --color-bg-weakest: var(--bg-canvas);
+  --color-bg-weak: var(--bg-sunken);
+  --color-bg-raised: var(--bg-raised);
+  --color-bg-overlay: var(--bg-overlay);
+  --color-bg-brand-weaker: var(--fill-brand-weak);
+  --color-bg-accent-weaker: var(--fill-brand-weak);
+  --color-bg-warning-weaker: var(--fill-warning-weak);
+  --color-bg-error-weaker: var(--fill-error-weak);
+  --color-bg-success-weaker: var(--fill-success-weak);
+
+  --color-text-strong: var(--text-strong);
+  --color-text-weak: var(--text-weak);
+  --color-text-weaker: var(--text-weaker);
+  --color-text-inverse: var(--text-inverse);
+  --color-text-brand: var(--text-brand);
+  --color-text-accent: var(--text-accent);
+  --color-text-warning: var(--text-warning);
+  --color-text-error: var(--text-error);
+  --color-text-success: var(--text-success);
+
+  --color-stroke-weak: var(--stroke-weak);
+  --color-stroke-strong: var(--stroke-strong);
+  --color-stroke-brand: var(--stroke-brand);
+  --color-stroke-error: var(--stroke-error);
+
+  --color-fill-brand: var(--fill-brand-strong);
+  --color-fill-brand-hover: var(--fill-brand-strong-hover);
+  --color-fill-accent: var(--fill-accent-strong);
+  --color-fill-warning: var(--fill-warning-strong);
+  --color-fill-error: var(--fill-error-strong);
+  --color-fill-success: var(--fill-success-strong);
+
+  --shadow-suave: var(--shadow-sm);
+  --shadow-painel: var(--shadow-lg);
+
+  --font-display: var(--ckp-font-display);
+  --font-sans: var(--ckp-font-body);
+  --font-mono: var(--ckp-font-mono);
+}

@@ -1,0 +1,12 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+sqlmodel==0.0.22
+python-multipart==0.0.20
+pdfplumber==0.11.4
+# cryptography 50 traz um wheel que exige OpenSSL mais novo do que o do macOS
+# desta maquina (falha em dlopen: _EVP_DigestSqueeze). 44 e a ultima que carrega.
+cryptography==44.0.1
+openpyxl==3.1.5
+itsdangerous==2.2.0
+pytest==8.3.4
+httpx==0.28.1

@@ -1,0 +1,60 @@
+.planilha-fortes {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-surface);
+  color: var(--text-strong);
+  font-size: var(--ckp-size-2xs);
+  font-family: "Calibri", "Segoe UI", var(--ckp-font-body), sans-serif;
+}
+
+.planilha-fortes th,
+.planilha-fortes td {
+  border: var(--ckp-border-thin) solid var(--stroke-weak);
+  padding: 2px 6px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.planilha-fortes thead th {
+  background: var(--bg-surface);
+  font-weight: 400;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.planilha-fortes .celula-valor {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  font-family: var(--ckp-font-mono);
+}
+
+.planilha-fortes .celula-conta {
+  font-family: var(--ckp-font-mono);
+  white-space: nowrap;
+}
+
+.planilha-fortes tr[data-estado="PENDENTE"] td {
+  background: var(--fill-error-weak);
+}
+
+.planilha-fortes tr[data-estado="MANUAL"] td {
+  background: var(--fill-warning-weak);
+}
+
+.planilha-fortes input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
+.planilha-fortes,
+.planilha-fortes tr,
+.planilha-fortes td {
+  transition: none;
+  animation: none;
+}

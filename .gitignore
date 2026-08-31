@@ -1,0 +1,20 @@
+.DS_Store
+node_modules/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+.venv/
+venv/
+dist/
+tsconfig.tsbuildinfo
+# SQLite gerado em runtime; o estado real nasce do seed mais os PDFs importados.
+*.db
+*.xlsx
+!specs/**
+# A suite de testes le os arquivos do cliente (ADR 0009): sem eles, a maioria dos
+# testes nao tem o que rodar.
+!arquivos-clickip/**/*.xlsx
+# Artefatos gerados por tools/minerar_depara.py: o CSV e o seed versionado do app,
+# o XLSX e a copia de revisao para o contador.
+!docs/base-depara-inicial.xlsx
